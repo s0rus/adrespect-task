@@ -1,3 +1,7 @@
+## Preview
+
+You can preview it either trough [my domain](https://adrespect.devsor.us/), or trough [Vercel](https://adrespect-task-pm.vercel.app/).
+
 ## Local development
 
 Install dependencies
