@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #1b5b31;
+    --primary-foreground: #f5f0ec;
+
+    --secondary: #dcc1ab;
+    --secondary-foreground: #111111;
+
+    --background: #111111;
+    --foreground: #f5f0ec;
+
+    --white: #ffffff;
+    --black: #000000;
+
+    --font-primary: "Montserrat";
+    --font-secondary: "Inter";
+  }
+
+  body {
+    @apply bg-background font-primary text-secondary-foreground;
+  }
+}
+
+@layer components {
+  .btn-base {
+    @apply inline-flex items-center gap-2 rounded-full px-6 pb-3.5 pt-3 font-secondary transition-colors duration-200 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary;
+  }
+
+  .btn-primary-outline {
+    @apply btn-base border-[1px] border-primary text-primary hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .btn-secondary {
+    @apply btn-base bg-foreground text-primary hover:bg-secondary hover:text-secondary-foreground;
+  }
+
+  .btn-secondary-outline {
+    @apply btn-base border-[1px] border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary;
+  }
+
+  .btn-dark-outline {
+    @apply btn-base border-[1px] border-background text-background hover:bg-background hover:text-foreground;
+  }
+}
